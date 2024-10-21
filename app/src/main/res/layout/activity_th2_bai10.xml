@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_1"
+    tools:context=".TH2_Bai10">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Thông tin cá nhân -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:textSize="20dp"
+                android:text="Thông tin cá nhân"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên khách hàng:"
+            android:background="@color/blue"
+            android:textStyle="bold">
+
+        </TextView>
+        <EditText
+            android:id="@+id/et_ten_khach_hang"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            android:hint="Tên khách hàng" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lượng sách:"
+            android:background="@color/blue"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_so_luong_sach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:hint="Số lượng sách"
+            android:inputType="number" />
+    </LinearLayout>
+</LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/cb_khach_hang_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:text="Khách hàng VIP" />
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Thành tiền:"
+        android:textStyle="bold"
+        android:background="@color/blue">
+
+    </TextView>
+    <EditText
+        android:id="@+id/et_thanh_tien"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="Thành tiền"
+        android:enabled="false" />
+</TableRow>
+
+
+            <LinearLayout
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btn_tinh_tt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TÍNH TT" />
+
+                <Button
+                    android:id="@+id/btn_tiep"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TIẾP" />
+
+                <Button
+                    android:id="@+id/btn_thong_ke"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="THỐNG KÊ" />
+
+            </LinearLayout>
+            <!-- Nút điều khiển -->
+
+
+            <!-- Thông tin thống kê -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:text="Thông tin thống kê"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Tổng KH:"
+                    android:background="@color/blue"
+                    >
+
+                </TextView>
+                <EditText
+                    android:id="@+id/et_tong_so_kh"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="43dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Tổng số KH"
+                    android:enabled="false" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Tổng KH VIP:"
+                    android:background="@color/blue"
+                    >
+
+                </TextView>
+                <EditText
+                    android:id="@+id/et_tong_so_kh_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:hint="Tổng số KH VIP"
+                    android:enabled="false" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Tổng doanh thu:"
+                    android:background="@color/blue"
+                    >
+
+                </TextView>
+                <EditText
+                    android:id="@+id/et_tong_doanh_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tổng doanh thu"
+                    android:enabled="false" />
+            </TableRow>
+
+
+            <!-- Nút thoát -->
+            <ImageButton
+                android:id="@+id/btn_thoat"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_delete"
+                android:contentDescription="Thoát" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

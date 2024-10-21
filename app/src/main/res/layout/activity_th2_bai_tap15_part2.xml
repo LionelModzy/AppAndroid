@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TH2_BaiTap15_Part2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/img_1"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quản lí công việc hàng tuần"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@color/blue"
+            android:gravity="center" />
+
+        <!-- EditText for Task Name -->
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Công việc:"
+                android:background="@color/blue" />
+
+            <EditText
+                android:id="@+id/edtTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tên công việc"
+                android:padding="10dp"
+                android:layout_marginStart="4dp"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <!-- EditText for Task Content -->
+        <TableRow android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Nội dung:"
+                android:background="@color/blue" />
+
+            <EditText
+                android:id="@+id/edtContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tên nội dung"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <!-- Section to display current date and time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <!-- TextView for Current Date -->
+                <TextView
+                    android:id="@+id/txtCurrentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18dp"
+                    android:background="@color/blue"
+                    android:text="Ngày hiện tại:" />
+
+                <!-- TextView for Current Time -->
+                <TextView
+                    android:id="@+id/txtCurrentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18dp"
+                    android:background="@color/blue"
+                    android:layout_height="match_parent"
+                    android:text="Giờ hiện tại" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="6">
+
+                <!-- Button to pick date -->
+                <Button
+                    android:id="@+id/btnDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn Ngày" />
+
+                <!-- Button to pick time -->
+                <Button
+                    android:id="@+id/btnTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn Giờ" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- TextView to display selected date and time -->
+        <TextView
+            android:id="@+id/txtDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Ngày, Giờ hoàn thành:"
+            android:padding="10dp"
+            android:textSize="18sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:id="@+id/btnAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm công việc" />
+
+    <Button
+        android:id="@+id/btnDeleteTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xóa Công Việc" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thoát" />
+
+</LinearLayout>
+        <!-- Buttons to add, delete, exit tasks -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách công việc"
+            android:layout_gravity="center"
+            android:background="@color/blue"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+        <!-- ListView to display tasks -->
+        <ListView
+            android:id="@+id/lstTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
